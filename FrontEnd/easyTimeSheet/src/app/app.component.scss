@@ -1,0 +1,99 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.nav-bar{
+    position: fixed;
+    width: 100% !important;
+}
+
+.title {
+    font-family: 'Segoe UI';
+    font-size: 23px;  
+}
+.example-spacer {
+    flex: 0.1 0.1 ;
+  }
+
+  .spacer-high {
+    flex: 1 ;
+  }
+
+  .spacer-low {
+    flex: 1 ;
+  }
+
+.icon {
+margin-right: 10px;
+}
+
+.example-container {
+width: 500px;
+height: 300px;
+border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+display: flex;
+height: 100%;
+align-items: center;
+justify-content: center;
+}
+
+.example-sidenav {
+padding: 20px;
+}
+
+.button{
+    font-family: 'Segoe UI';
+    border: 0;
+    padding: 15px;
+    font-size: 14px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+ }
+
+section {
+display: table;
+}
+
+.label {
+display: table-cell;
+font-size: 14px;
+margin-left: 8px;
+min-width: 120px;
+}
+
+.button-row {
+display: table-cell;
+width: 490px;
+}
+
+.button-row .mat-button-base {
+margin: 8px 8px 8px 0;
+}
+
+.flex-container {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.button-container {
+display: flex;
+margin-left: 10px;
+}
+
+a { cursor: pointer; }
+
+.app-container {
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.btn-delete-user {
+    width: 40px;
+    text-align: center;
+    box-sizing: content-box;
+}
