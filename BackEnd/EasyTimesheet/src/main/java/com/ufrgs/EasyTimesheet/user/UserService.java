@@ -20,12 +20,13 @@ public class UserService {
         return userList;
     }
 
+
     public User create(User user) {
         return userRepository.save(user);
     }
 
-    public User login(String email, String password) {
-        User user = userRepository.findByEmailIgnoreCase(email);
+    public User login(String login, String password) {
+        User user = userRepository.findByLoginIgnoreCase(login);
 
         if(user.getPwd().equals(password)){
             user.setPwd("");
@@ -40,6 +41,19 @@ public class UserService {
         String email = user.getEmail();
         User newUser = userRepository.findByEmailIgnoreCase(email);
         newUser.setPwd("");
+        return newUser;
+    }
+
+    public User findByLogin(User user)
+    {
+        String login = user.getLogin();
+        User newUser = userRepository.findByLoginIgnoreCase(login);
+        newUser.setPwd("");
+        return newUser;
+    }
+    public User findById(Long id)
+    {
+        User newUser = userRepository.findById(id).orElseThrow();
         return newUser;
     }
 }

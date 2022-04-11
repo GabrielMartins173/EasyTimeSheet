@@ -5,31 +5,35 @@ import lombok.*;
 
 import javax.persistence.*;
 
-    @Entity(name = "USER")
-    @Builder
-    @Getter
-    @Setter
-    @AllArgsConstructor
-    @NoArgsConstructor
-    public class User {
+@Entity(name = "USER")
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class User {
 
-        @Id
-        @Column(name = "ID")
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        @Column(name = "NAME")
-        @NotNull
-        private String name;
+    @Column(name = "NAME")
+    @NotNull
+    private String name;
 
-        @Column(name = "ROLE")
-        private String role;
+    @Column(name = "LOGIN")
+    @NotNull
+    private String login;
 
-        @Column(name = "EMAIL")
-        @NotNull
-        private String email;
+    @Column(name = "ROLE")
+    private String role;
 
-        @Column(name = "PWD")
-        @NotNull
-        private String pwd;
-    }
+    @Column(name = "EMAIL")
+    @NotNull
+    private String email;
+
+    @Column(name = "PWD")
+    @NotNull
+    private String pwd;
+}

@@ -12,11 +12,15 @@ public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 
     public User findByEmailIgnoreCase(String email);
 
+    public User findByLoginIgnoreCase(String login);
+
     public User save(User user);
 
     public User findById(long id);
 
     public List<User> findAll();
+
+
 
 
 }

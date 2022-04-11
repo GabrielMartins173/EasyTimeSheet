@@ -6,7 +6,7 @@ import lombok.*;
 @Setter
 public class Login {
 
-    private String email;
+    private String login;
 
     private String pwd;
 }

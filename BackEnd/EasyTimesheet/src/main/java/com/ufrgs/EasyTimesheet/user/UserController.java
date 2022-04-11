@@ -19,7 +19,14 @@ public class UserController {
     @PostMapping("/user/login")
     public ResponseEntity<User> login(@RequestBody Login login) {
 
-        return ResponseEntity.ok().body(userService.login(login.getEmail(), login.getPwd()));
+        User user = userService.login(login.getLogin(), login.getPwd());
+
+        if(user.getEmail() == null) {
+            return ResponseEntity.badRequest().body(user);
+        } else {
+            return ResponseEntity.ok().body(user);
+        }
+
     }
 
     @PostMapping("/user/create")
