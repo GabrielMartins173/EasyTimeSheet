@@ -1,49 +1,41 @@
-<div class="bg">
-  <div>
-    <ng-container>
-      <mat-toolbar color="primary" class="nav-bar">
-        <mat-icon style="margin-right: 8px">alarm</mat-icon>
-        <span class="title">Easy TimeSheet</span>
-        <span class="example-spacer"></span>
-        <button mat-raised-button  class="button-container" [routerLink]="'/manage-classroom'"
-          style="margin-right: 0.5%;">
-          <mat-icon class="icon">menu_book</mat-icon>
-          <mat-label>Manage Classroom - Teacher's Home</mat-label>
-      </button>
-      <button mat-raised-button  class="button-container" [routerLink]="'/my-classes'"
-          style="margin-right: 0.5%;">
-          <mat-icon class="icon">class</mat-icon>
-          <mat-label>My Classes - Student's Home</mat-label>
-      </button>
-      <button mat-raised-button  class="button-container" [routerLink]="'/search-class'"
-          style="margin-right: 0.5%;">
-          <mat-icon class="icon">search</mat-icon>
-          <mat-label>Search Class</mat-label>
-      </button>
-      <button mat-raised-button  class="button-container" [routerLink]="'/profile'"
-          style="margin-right: 0.5%;">
-          <mat-icon class="icon">person</mat-icon>
-          <mat-label>Profile</mat-label>
-      </button>
-      <button mat-raised-button  class="button-container" [routerLink]="'/manage-grants'"
-          style="margin-right: 0.5%;">
-          <mat-icon class="icon">settings</mat-icon>
-          <mat-label>Manage Permissions</mat-label>
-      </button>
-        <span class="spacer-high"></span>
-        <button
-          mat-fab
-          color="primary"
-          style="margin-right: 1%; margin-left: 0.5%; transition: none !important; box-shadow: none !important;"
-        >
-          <mat-icon>logout</mat-icon>
-        </button>
-      </mat-toolbar>
-    </ng-container>
-  </div>
-  <div>
-    <ng-container>
-      <router-outlet></router-outlet>
-    </ng-container>
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">EasyTimeSheet</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Home </a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+      </li>
+      <li class="nav-item">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
   </div>
 </div>
