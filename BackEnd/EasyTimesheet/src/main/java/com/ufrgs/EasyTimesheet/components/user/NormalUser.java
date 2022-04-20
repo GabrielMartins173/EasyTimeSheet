@@ -1,4 +1,4 @@
-package com.ufrgs.EasyTimesheet.user;
+package com.ufrgs.EasyTimesheet.components.user;
 
 import com.sun.istack.NotNull;
 import lombok.*;
@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class NormalUser {
 
     @Id
     @Column(name = "ID")

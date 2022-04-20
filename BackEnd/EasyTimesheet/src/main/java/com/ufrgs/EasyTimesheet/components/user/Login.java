@@ -1,4 +1,4 @@
-package com.ufrgs.EasyTimesheet.user;
+package com.ufrgs.EasyTimesheet.components.user;
 
 import lombok.*;
 

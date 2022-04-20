@@ -1,7 +1,6 @@
-package com.ufrgs.EasyTimesheet.classroom;
+package com.ufrgs.EasyTimesheet.components.classroom;
 
-import com.sun.istack.NotNull;
-import com.ufrgs.EasyTimesheet.user.User;
+import com.ufrgs.EasyTimesheet.components.user.NormalUser;
 import lombok.*;
 
 import javax.persistence.*;
@@ -28,5 +27,5 @@ public class Classroom {
             name = "CLASSROOM_STUDENTS",
             joinColumns = @JoinColumn(name = "CLASSROOM_ID"),
             inverseJoinColumns = @JoinColumn(name = "STUDENT_ID"))
-    Set<User> students;
+    Set<NormalUser> students;
 }

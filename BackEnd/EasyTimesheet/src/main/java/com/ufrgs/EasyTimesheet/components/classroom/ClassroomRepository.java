@@ -1,6 +1,5 @@
-package com.ufrgs.EasyTimesheet.classroom;
+package com.ufrgs.EasyTimesheet.components.classroom;
 
-import com.ufrgs.EasyTimesheet.user.User;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
