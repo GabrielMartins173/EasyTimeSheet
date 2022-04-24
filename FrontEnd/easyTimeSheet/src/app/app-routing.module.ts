@@ -9,6 +9,10 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { ConfirmPresenceComponent } from './confirm-presence/confirm-presence.component';
+import { ListOfClassroomsComponent } from './list-of-classrooms/list-of-classrooms.component';
+import { SearchClassesComponent } from './search-classes/search-classes.component';
+import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
+import { FindClassComponent } from './find-class/find-class.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,6 +23,10 @@ const routes: Routes = [
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
   { path: 'presence', component: ConfirmPresenceComponent },
+  { path: 'classrooms', component: ListOfClassroomsComponent },
+  { path: 'search/classroom', component: SearchClassesComponent },
+  { path: 'teacher/dashboard', component: TeacherDashboardComponent },
+  { path: 'find/class', component: FindClassComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

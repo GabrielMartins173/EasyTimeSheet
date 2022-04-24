@@ -48,6 +48,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListOfClassroomsComponent } from './list-of-classrooms/list-of-classrooms.component';
+import { SearchClassesComponent } from './search-classes/search-classes.component';
+import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
+import { FindClassComponent } from './find-class/find-class.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +63,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    ConfirmPresenceComponent
+    ConfirmPresenceComponent,
+    ListOfClassroomsComponent,
+    SearchClassesComponent,
+    TeacherDashboardComponent,
+    FindClassComponent
   ],
   imports: [
     BrowserModule,
