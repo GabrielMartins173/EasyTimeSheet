@@ -28,6 +28,7 @@
   padding-left: 100px;
 }
 
-.button-align-space-left {
-  padding-left: 80px;
+.button-align-space-right {
+  text-align: right !important;
+  justify-content: flex-end !important;
 }

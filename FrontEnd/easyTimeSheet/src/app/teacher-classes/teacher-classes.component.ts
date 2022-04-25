@@ -38,6 +38,10 @@ export class TeacherClassesComponent implements OnInit {
     this._location.back();
   }
 
+  clickedButton(){
+    console.log("Button Clicked");
+  }
+
   openDialog() {
     const dialogRef = this.dialog.open(DialogElements);
 
