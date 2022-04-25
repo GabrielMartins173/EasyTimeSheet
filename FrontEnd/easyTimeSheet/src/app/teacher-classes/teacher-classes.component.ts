@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import {DataSource} from '@angular/cdk/collections';
 import {Observable, ReplaySubject} from 'rxjs';
+import { MatDialog} from '@angular/material/dialog';
 
 export interface ClassroomElement {
   name: string;
@@ -29,12 +30,21 @@ const ELEMENT_DATA: ClassroomElement[] = [
   styleUrls: ['./teacher-classes.component.css'],
 })
 export class TeacherClassesComponent implements OnInit {
-  constructor(private _location: Location) {}
+  constructor(private _location: Location, public dialog: MatDialog) {}
 
   panelOpenState = false;
 
   backClicked() {
     this._location.back();
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogElements);
+
+    // usar esse subscribe para chamar a funcao de salvar a aula para o aluno no backend
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   ngOnInit(): void {}
@@ -66,3 +76,15 @@ class ExampleDataSource extends DataSource<ClassroomElement> {
   }
 }
 
+@Component({
+  selector: 'dialog-elements',
+  templateUrl: 'dialog-elements.html'
+})
+export class DialogElements {
+  constructor(public dialog: MatDialog) {}
+
+  closeDialog(){
+    console.log("trying to close");
+    this.dialog.closeAll();
+  }
+}
