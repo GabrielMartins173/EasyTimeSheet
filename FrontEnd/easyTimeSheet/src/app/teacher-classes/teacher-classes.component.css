@@ -3,8 +3,7 @@
 }
 
 .demo-table {
-  width: fit-content;
-  margin-left: 150px;
+  width: 100%;
 }
 
 .demo-button-container {
