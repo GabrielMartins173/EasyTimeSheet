@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-confirm-presence',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfirmPresenceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _location: Location) { }
 
   ngOnInit(): void {
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
 }

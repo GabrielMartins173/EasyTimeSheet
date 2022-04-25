@@ -49,9 +49,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListOfClassroomsComponent } from './list-of-classrooms/list-of-classrooms.component';
-import { SearchClassesComponent } from './search-classes/search-classes.component';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 import { FindClassComponent } from './find-class/find-class.component';
+import {MatNativeDateModule} from '@angular/material/core';
+import { TeacherClassesComponent } from './teacher-classes/teacher-classes.component';
 
 @NgModule({
   declarations: [
@@ -65,9 +66,9 @@ import { FindClassComponent } from './find-class/find-class.component';
     BoardUserComponent,
     ConfirmPresenceComponent,
     ListOfClassroomsComponent,
-    SearchClassesComponent,
     TeacherDashboardComponent,
-    FindClassComponent
+    FindClassComponent,
+    TeacherClassesComponent
   ],
   imports: [
     BrowserModule,
@@ -106,7 +107,9 @@ import { FindClassComponent } from './find-class/find-class.component';
     MatListModule,
     MatCardModule,
     MatRadioModule,
-    CommonModule
+    CommonModule,
+    MatNativeDateModule,
+    
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

@@ -91,11 +91,21 @@ margin-left: 0.5%;
   color: white;
   width: 100% !important;
 }
+  .mat-card-actions{
+    font-size: small !important;
+  }
+
+  .mat-card-title{
+    font-size: small !important;
+    margin-left: -16px;
+  }
 
   .example-card {
     max-width: 250px;
     background-color: rgb(31, 30, 30);
     color: blanchedalmond;
+    max-height: 320px;
+    margin-bottom: 10px;
   }
 
   .card-format {

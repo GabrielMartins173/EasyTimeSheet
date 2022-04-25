@@ -10,13 +10,13 @@ export interface ClassroomElement {
 }
 
 const ELEMENT_DATA: ClassroomElement[] = [
-  {position: 1, name: 'Class 1', numberOfStudents: 20, numberOfLessons: 10},
-  {position: 2, name: 'Class 2', numberOfStudents: 30, numberOfLessons: 11},
+  {position: 1, name: 'Class 1', numberOfStudents: 12, numberOfLessons: 1},
+  {position: 2, name: 'Class 2', numberOfStudents: 30, numberOfLessons: 7},
   {position: 3, name: 'Class 3', numberOfStudents: 20, numberOfLessons: 8},
   {position: 4, name: 'Class 4', numberOfStudents: 25, numberOfLessons: 10},
   {position: 5, name: 'Class 5', numberOfStudents: 18, numberOfLessons: 10},
   {position: 6, name: 'Class 6', numberOfStudents: 35, numberOfLessons: 8},
-  {position: 7, name: 'Class 7', numberOfStudents: 31, numberOfLessons: 12},
+  {position: 7, name: 'Class 7', numberOfStudents: 31, numberOfLessons: 2},
   {position: 8, name: 'Class 8', numberOfStudents: 16, numberOfLessons: 10},
   {position: 9, name: 'Class 9', numberOfStudents: 22, numberOfLessons: 10},
   {position: 10, name: 'Class 10', numberOfStudents: 34, numberOfLessons: 5},

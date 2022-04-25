@@ -2,7 +2,7 @@
   <header class="jumbotron">
     <p>
       <button
-        [routerLink]="['/classrooms']"
+        (click)="backClicked()"
         mat-button
         style="color: rgb(0, 0, 0)"
       >
@@ -17,41 +17,51 @@
               <div mat-card-avatar class="example-header-image"></div>
               <mat-card-title>Aula 1</mat-card-title>
             </mat-card-header>
-            <img mat-card-image class=imageBlock
+            <img
+              mat-card-image
               src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
-              alt="Cartoon Classroom Image">
+              alt="Cartoon Classroom Image"
+            />
             <mat-card-actions>
-              <button mat-button style="color: rgb(255, 2, 2);">FALTA</button>
+              <button mat-button style="color: rgb(255, 2, 2)">FALTA</button>
             </mat-card-actions>
           </mat-card>
         </mat-grid-tile>
-      
+
         <mat-grid-tile>
           <mat-card class="example-card">
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
               <mat-card-title>aula 2</mat-card-title>
             </mat-card-header>
-            <img mat-card-image class=imageBlock
+            <img
+              mat-card-image
               src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
-              alt="Cartoon Classroom Image">
+              alt="Cartoon Classroom Image"
+            />
             <mat-card-actions>
-              <button mat-button style="color:rgb(58, 155, 219)">Marcar Presenca</button>
+              <button mat-button style="color: rgb(58, 155, 219)">
+                Marcar Presenca
+              </button>
             </mat-card-actions>
           </mat-card>
         </mat-grid-tile>
-      
+
         <mat-grid-tile>
           <mat-card class="example-card">
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
               <mat-card-title>aula 3</mat-card-title>
             </mat-card-header>
-            <img mat-card-image class=imageBlock
+            <img
+              mat-card-image
               src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
-              alt="Cartoon Classroom Image">
+              alt="Cartoon Classroom Image"
+            />
             <mat-card-actions>
-              <button mat-button style="color:rgb(202, 245, 84)">AULA FUTURA</button>
+              <button mat-button style="color: rgb(202, 245, 84)">
+                AULA FUTURA
+              </button>
             </mat-card-actions>
           </mat-card>
         </mat-grid-tile>

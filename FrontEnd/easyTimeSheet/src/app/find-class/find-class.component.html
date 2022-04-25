@@ -1,1 +1,219 @@
-<p>find-class works!</p>
+<div class="container">
+  <header class="jumbotron">
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Search For A Class Name</mat-label>
+        <textarea matInput></textarea>
+        <button matSuffix mat-button><mat-icon>search</mat-icon></button>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-grid-list cols="3">
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Discrete Math</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <button
+                mat-button
+                style="color: rgb(67, 221, 75)"
+                (click)="openDialog()"
+              >
+                <mat-icon>arrow_forward</mat-icon>
+                Join This Class
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Calculus I </mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <div>
+                <mat-label style="padding-left: 30px; margin-bottom: 0"
+                  >You're already in this class</mat-label
+                >
+              </div>
+              <div>
+                <button
+                  [routerLink]="['/presence']"
+                  mat-button
+                  style="color: rgb(67, 147, 221)"
+                >
+                  <mat-icon>arrow_forward</mat-icon>
+                  View Your Class Details
+                </button>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Fundamentals of Algorithms</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <div>
+                <mat-label style="padding-left: 30px; margin-bottom: 0"
+                  >You're already in this class</mat-label
+                >
+              </div>
+              <div>
+                <button
+                  [routerLink]="['/presence']"
+                  mat-button
+                  style="color: rgb(67, 147, 221)"
+                >
+                  <mat-icon>arrow_forward</mat-icon>
+                  View Your Class Details
+                </button>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Calculus II</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <button
+                (click)="openDialog()"
+                mat-button
+                style="color: rgb(67, 221, 75)"
+              >
+                <mat-icon>arrow_forward</mat-icon>
+                Join This Class
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Introduction to Databases</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <button
+                (click)="openDialog()"
+                mat-button
+                style="color: rgb(67, 221, 75)"
+              >
+                <mat-icon>arrow_forward</mat-icon>
+                Join This Class
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Programming Logics</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <div>
+                <mat-label style="padding-left: 30px; margin-bottom: 0"
+                  >You're already in this class</mat-label
+                >
+              </div>
+              <div>
+                <button
+                  [routerLink]="['/presence']"
+                  mat-button
+                  style="color: rgb(67, 147, 221)"
+                >
+                  <mat-icon>arrow_forward</mat-icon>
+                  View Your Class Details
+                </button>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Operational Systems I</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <button
+                (click)="openDialog()"
+                mat-button
+                style="color: rgb(67, 221, 75)"
+              >
+                <mat-icon>arrow_forward</mat-icon>
+                Join This Class
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Computer Network</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://modernclassroom.co.za/wp-content/uploads/2021/11/WILLOWMOORE-HIGH-SCHOOL-Admission-Fees-and-Contact-Information-for-Application-612x450.jpeg"
+              alt="Cartoon Classroom Image"
+            />
+            <mat-card-actions>
+              <button
+                (click)="openDialog()"
+                mat-button
+                style="color: rgb(67, 221, 75)"
+              >
+                <mat-icon>arrow_forward</mat-icon>
+                Join This Class
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </p>
+  </header>
+</div>

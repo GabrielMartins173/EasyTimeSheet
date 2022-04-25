@@ -2,7 +2,7 @@
   <header class="jumbotron">
     <div class="demo-button-container">
       <button mat-raised-button (click)="addData()" class="demo-button">
-        Add data
+        Add Class
       </button>
       <button
         mat-raised-button
@@ -10,7 +10,7 @@
         (click)="removeData()"
         class="demo-button"
       >
-        Remove data
+        Remove Class
       </button>
     </div>
 
@@ -30,7 +30,7 @@
       <ng-container matColumnDef="numberOfLessons">
         <th class="header-align-space-right" mat-header-cell *matHeaderCellDef>Number Of Lessons</th>
         <td class="header-align-space-right" mat-cell *matCellDef="let element">
-          {{ element.numberOfLessons }} / 20
+          {{ element.numberOfLessons }} / 10
         </td>
       </ng-container>
 
@@ -47,7 +47,7 @@
         <th class="header-align-space-left" mat-header-cell *matHeaderCellDef>Manage Students Attendance</th>
         <td class="button-align-space-left" mat-cell *matCellDef="let element">
           <button
-            [routerLink]="['/presence']"
+            [routerLink]="['/teacher/classes']"
             mat-button
           >
             <mat-icon>settings</mat-icon>
