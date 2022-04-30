@@ -1,7 +1,7 @@
 package com.ufrgs.EasyTimesheet.components.classroom;
 
-import com.ufrgs.EasyTimesheet.components.user.NormalUser;
 import com.ufrgs.EasyTimesheet.components.user.NormalUserService;
+import com.ufrgs.EasyTimesheet.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,12 +31,12 @@ public class ClassroomService {
     public Classroom addStudent(Long id, Long studentId) {
 
         Classroom classroom = classroomRepository.findById(id).orElseThrow();
-        Set<NormalUser> studentList = classroom.getStudents();
+        Set<User> studentList = classroom.getStudents();
         if (studentList == null) {
             studentList = new HashSet<>();
         }
 
-        NormalUser student = normalUserService.findById(studentId);
+        User student = normalUserService.findById(studentId);
         studentList.add(student);
         classroom.setStudents(studentList);
         classroomRepository.save(classroom);

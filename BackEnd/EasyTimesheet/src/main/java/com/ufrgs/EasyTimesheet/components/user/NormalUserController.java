@@ -1,5 +1,6 @@
 package com.ufrgs.EasyTimesheet.components.user;
 
+import com.ufrgs.EasyTimesheet.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -17,9 +18,9 @@ public class NormalUserController {
 
 
     @PostMapping("/user/login")
-    public ResponseEntity<NormalUser> login(@RequestBody Login login) {
+    public ResponseEntity<User> login(@RequestBody Login login) {
 
-        NormalUser normalUser = normalUserService.login(login.getLogin(), login.getPwd());
+        User normalUser = normalUserService.login(login.getLogin(), login.getPwd());
 
         if(normalUser.getEmail() == null) {
             return ResponseEntity.badRequest().body(normalUser);
@@ -30,8 +31,8 @@ public class NormalUserController {
     }
 
     @PostMapping("/user/create")
-    public ResponseEntity<NormalUser> create(@RequestBody NormalUser normalUser) {
-        NormalUser createdNormalUser = normalUserService.create(normalUser);
+    public ResponseEntity<User> create(@RequestBody User normalUser) {
+        User createdNormalUser = normalUserService.create(normalUser);
 
         if (createdNormalUser == null) {
             return ResponseEntity.notFound().build();
@@ -40,9 +41,9 @@ public class NormalUserController {
     }
 
     @GetMapping("/user")
-    public ResponseEntity<List<NormalUser>> findAll()
+    public ResponseEntity<List<User>> findAll()
     {
-        List<NormalUser> normalUserList = normalUserService.findAllUser();
+        List<User> normalUserList = normalUserService.findAllUser();
 
         if(normalUserList == null)
         {
