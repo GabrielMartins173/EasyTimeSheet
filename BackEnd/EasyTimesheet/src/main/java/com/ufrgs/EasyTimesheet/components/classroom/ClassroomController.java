@@ -32,6 +32,18 @@ public class ClassroomController {
         classroom.setStudents(classroomService.findStudentsById(classRoomRequest.getStudentsId()));
         classroom.setTeacher(classroomService.findTeacherById(classRoomRequest.getTeacherId()));
         classroom = classroomService.saveClassroom(classroom);
+
+        //TODO: create all lessons here :)
+        return ResponseEntity.ok().body(classroom);
+    }
+
+    @PostMapping("/addStudentToClassroom")
+    public ResponseEntity<Classroom> addStudent(@RequestBody AddStudentRequest addStudentRequest)
+    {
+        Classroom classroom = classroomService
+                .addStudent(addStudentRequest.getClassRoomId(), addStudentRequest.getStudentId());
+
+        //TODO: create presence of student in all lessons
         return ResponseEntity.ok().body(classroom);
     }
 }
