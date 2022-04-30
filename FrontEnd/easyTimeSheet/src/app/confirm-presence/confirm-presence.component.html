@@ -1,0 +1,85 @@
+<div class="container">
+  <header class="jumbotron">
+    <div>
+      <p>
+        <button (click)="backClicked()" mat-button style="color: rgb(0, 0, 0)">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </p>
+    </div>
+    <br />
+    <div class="label-style">
+      <mat-label>
+        <strong>Your Presence At This Class Until Now Is 80%</strong>
+      </mat-label>
+    </div>
+    <br />
+    <div class="label-style">
+      <mat-label>
+        <strong>The Minimum Frequency Required For This Class Is 70%</strong>
+      </mat-label>
+    </div>
+    <br />
+    <div>
+      <table mat-table [dataSource]="dataSource" class="demo-table">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th
+            class="header-align-space-right"
+            mat-header-cell
+            *matHeaderCellDef
+          >
+            Lessons
+          </th>
+          <td
+            class="header-align-space-right"
+            mat-cell
+            *matCellDef="let element"
+          >
+            {{ element.name }}
+          </td>
+        </ng-container>
+
+        <!-- numberOfLessonsRemaining Column -->
+        <ng-container matColumnDef="status">
+          <th
+            class="header-align-space-right"
+            mat-header-cell
+            *matHeaderCellDef
+          >
+            Attendance Status
+          </th>
+          <td
+            class="header-align-space-right"
+            mat-cell
+            *matCellDef="let element"
+          >
+            {{ element.status }}
+          </td>
+        </ng-container>
+
+        <!-- Change Student Attendance Status for this class -->
+        <ng-container
+          class="last-column"
+          matColumnDef="changeStudentAttendance"
+        >
+          <th class="header-align-space-left" mat-header-cell *matHeaderCellDef>
+            Confirm Your Presence At This Lesson
+          </th>
+          <td
+            class="button-align-space-left"
+            mat-cell
+            *matCellDef="let element"
+          >
+            <button [disabled]="element.status != 'This Is Today\'s Lesson'" (click)="openDialog()" mat-button>
+              <mat-icon>check</mat-icon>
+              Confirm
+            </button>
+          </td></ng-container
+        >
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </header>
+</div>
