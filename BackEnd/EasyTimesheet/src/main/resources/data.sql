@@ -4,7 +4,7 @@ INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 
 INSERT INTO USERS (NAME, USERNAME, EMAIL, PASSWORD) VALUES
-  ('Pimenta', 'profpimenta', 'pimenta@ufrgs.br', 'abc123'),
+  ('Pimenta', 'profpimenta', 'pimenta@ufrgs.br', 'thisismypassword'),
   ('Gabriel', 'gabrielzito', 'gabriel@gmail.com', 'teste123'),
   ('Giovani', 'giovanizito', 'giovani@inf.ufrgs.br', 'outrasenha');
 

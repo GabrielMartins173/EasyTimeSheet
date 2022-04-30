@@ -1,6 +1,5 @@
 package com.ufrgs.EasyTimesheet.components.classroom;
 
-import com.ufrgs.EasyTimesheet.components.user.NormalUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,9 +13,6 @@ public class ClassroomController {
 
     @Autowired
     private ClassroomService classroomService;
-
-    @Autowired
-    private NormalUserService normalUserService;
 
     @GetMapping("/classroom")
     public ResponseEntity<List<Classroom>> findAll()
