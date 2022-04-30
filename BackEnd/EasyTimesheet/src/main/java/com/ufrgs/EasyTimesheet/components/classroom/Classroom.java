@@ -1,9 +1,11 @@
 package com.ufrgs.EasyTimesheet.components.classroom;
 
+import com.sun.istack.NotNull;
 import com.ufrgs.EasyTimesheet.models.User;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
 @Entity(name = "CLASSROOM")
@@ -19,8 +21,18 @@ public class Classroom {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @Column(name = "CLASSNAME")
     private String className;
+
+    @NotBlank
+    @Column(name = "NUMBEROFLESSONS")
+    private int numberOfLessons;
+
+    @NotBlank
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "TEACHER_ID", referencedColumnName = "id")
+    private User teacher;
 
     @ManyToMany
     @JoinTable(
