@@ -1,11 +1,11 @@
 package com.ufrgs.EasyTimesheet.components.classroom;
 
-import com.sun.istack.NotNull;
 import com.ufrgs.EasyTimesheet.models.User;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Entity(name = "CLASSROOM")
@@ -25,11 +25,11 @@ public class Classroom {
     @Column(name = "CLASSNAME")
     private String className;
 
-    @NotBlank
+    @NotNull
     @Column(name = "NUMBEROFLESSONS")
-    private int numberOfLessons;
+    private Integer numberOfLessons;
 
-    @NotBlank
+    @NotNull
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "TEACHER_ID", referencedColumnName = "id")
     private User teacher;

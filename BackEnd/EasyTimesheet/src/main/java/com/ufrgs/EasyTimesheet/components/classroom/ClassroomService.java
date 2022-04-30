@@ -42,4 +42,22 @@ public class ClassroomService {
 
         return classroom;
     }
+
+    public Set<User> findStudentsById(Set<Integer> studentsId) {
+
+        Set<User> students = new HashSet<>();
+
+        for (Integer student : studentsId){
+
+            students.add(userRepository.findById(student));
+        }
+        return students;
+    }
+
+    public User findTeacherById(int teacherId) {
+
+        User teacher = userRepository.findById(teacherId);
+
+        return teacher;
+    }
 }

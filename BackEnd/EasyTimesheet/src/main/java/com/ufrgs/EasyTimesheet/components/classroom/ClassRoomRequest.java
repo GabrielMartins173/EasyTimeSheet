@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Getter
@@ -13,10 +14,10 @@ public class ClassRoomRequest {
 
     @NotBlank
     private String className;
-    @NotBlank
+    @NotNull
     private int numberOfLessons;
-    @NotBlank
-    private User teacher;
 
-    Set<User> students;
+    private int teacherId;
+
+    private Set<Integer> studentsId;
 }
