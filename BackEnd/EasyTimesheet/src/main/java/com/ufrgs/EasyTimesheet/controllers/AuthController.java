@@ -73,7 +73,8 @@ public class AuthController {
     // Create new user's account
     User user = new User(signUpRequest.getUsername(),
             signUpRequest.getEmail(),
-            encoder.encode(signUpRequest.getPassword()));
+            encoder.encode(signUpRequest.getPassword()),
+                    signUpRequest.getName());
     Set<String> strRoles = signUpRequest.getRole();
     Set<Role> roles = new HashSet<>();
     if (strRoles == null) {
@@ -89,7 +90,7 @@ public class AuthController {
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
             roles.add(adminRole);
             break;
-          case "mod":
+          case "moderator":
             Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
             roles.add(modRole);
