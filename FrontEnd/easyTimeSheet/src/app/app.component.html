@@ -5,23 +5,17 @@
       <li class="nav-item">
         <a href="/home" class="nav-link" routerLink="home">Home </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="showUserBoard">
         <a href="/find/class" class="nav-link" routerLink="find/class">Find a Class </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="showUserBoard">
         <a href="/classrooms" class="nav-link" routerLink="classrooms">Student's Classes </a>
-      </li>
-      <li class="nav-item">
-        <a href="/teacher/dashboard" class="nav-link" routerLink="teacher/dashboard">Teacher's Dashboard </a>
       </li>
       <li class="nav-item" *ngIf="showAdminBoard">
         <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
       </li>
       <li class="nav-item" *ngIf="showModeratorBoard">
-        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
-      </li>
-      <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+        <a href="/teacher/dashboard" class="nav-link" routerLink="teacher/dashboard">Teacher's Dashboard </a>
       </li>
     </ul>
 
