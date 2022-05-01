@@ -15,14 +15,16 @@
             <mat-panel-description>
               <ng-container>
                 <div>Number Of Students Attending This Class -> 10 of 12</div>
-                <div>
-                  <button style="margin-left: 125%;" [disabled]="true" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button [disabled]="true" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
+          <div>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -87,6 +89,7 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
           </table>
+        </div>
         </mat-expansion-panel>
 
         <mat-expansion-panel hideToggle>
@@ -95,14 +98,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is Today's Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="true" mat-button (click)="clickedButton()">
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button [disabled]="true" mat-button (click)="clickedButton()">
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -175,14 +179,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -255,14 +260,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -335,14 +341,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -415,14 +422,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -495,14 +503,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -575,14 +584,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -655,14 +665,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
@@ -735,14 +746,15 @@
             <mat-panel-description>
               <ng-container>
                 <div>This Is A Future Lesson</div>
-                <div>
-                  <button style="margin-left: 200%;" [disabled]="false" mat-button>
-                    <mat-icon>start</mat-icon> Start This Lesson
-                  </button>
-                </div>
               </ng-container>
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <div>
+            <button  [disabled]="false" mat-button>
+              <mat-icon>start</mat-icon> Start This Lesson
+            </button>
+          </div>
+          <br>
           <table mat-table [dataSource]="dataSource" class="demo-table">
             <!-- Name Column -->
             <ng-container matColumnDef="name">

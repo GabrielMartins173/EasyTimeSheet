@@ -29,7 +29,7 @@ const ELEMENT_DATA: ClassroomElement[] = [
 })
 export class TeacherDashboardComponent {
 
-  displayedColumns: string[] = ['name', 'numberOfLessons', 'numberOfStudents', 'manageStudentsAttendance'];
+  displayedColumns: string[] = ['name', 'numberOfLessons', 'numberOfStudents', 'manageStudentsAttendance', 'deleteClassroom'];
   dataToDisplay = [...ELEMENT_DATA];
 
   dataSource = new ExampleDataSource(this.dataToDisplay);

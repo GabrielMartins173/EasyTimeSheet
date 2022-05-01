@@ -1,24 +1,11 @@
-<div class="container">
   <header class="jumbotron">
     <div class="demo-button-container">
       <button mat-raised-button (click)="addData()" class="demo-button">
         Add Class
       </button>
-      <button
-        mat-raised-button
-        [disabled]="!dataToDisplay.length"
-        (click)="removeData()"
-        class="demo-button"
-      >
-        Remove Class
-      </button>
     </div>
 
-    <table
-      mat-table
-      [dataSource]="dataSource"
-      class="mat-elevation-z8 demo-table"
-    >
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
 
       <!-- Name Column -->
       <ng-container matColumnDef="name">
@@ -43,21 +30,26 @@
       </ng-container>
 
       <!-- manageStudentsAttendance Column -->
-      <ng-container class="last-column" matColumnDef="manageStudentsAttendance">
+      <ng-container matColumnDef="manageStudentsAttendance">
         <th class="header-align-space-left" mat-header-cell *matHeaderCellDef>Manage Students Attendance</th>
         <td class="button-align-space-left" mat-cell *matCellDef="let element">
-          <button
-            [routerLink]="['/teacher/classes']"
-            mat-button
-          >
+          <button [routerLink]="['/teacher/classes']" mat-button>
             <mat-icon>settings</mat-icon>
-            View Your Class Details
           </button>
-        </td></ng-container
-      >
+        </td>
+      </ng-container>
+
+      <!-- Delete Classroom Column -->
+      <ng-container matColumnDef="deleteClassroom">
+        <th class="header-align-space-left" mat-header-cell *matHeaderCellDef>Delete this Classroom</th>
+        <td class="button-align-space-left" mat-cell *matCellDef="let element">
+          <button mat-button [disabled]="!dataToDisplay.length" (click)="removeData()">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
   </header>
-</div>
